@@ -5,7 +5,7 @@ Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase,
 
 They are designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
 
-These configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos. This repo is in fact forked from a subdirectory of the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and is used as a submodule - these configs are tested against Docker containers as part of CI tests in that repo.
+These configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
 
 They can be combined with VRRP-based High Availability solutions to create full production-grade High Availability load balancer solutions and come pre-tuned with advanced health checks and relevant settings, as well as some protections such as limiting access to these services to only private IP addressing schemes as they should rarely be accessed outside your private network.
 
@@ -40,3 +40,5 @@ These addresses are used in continuous integration testing of this repo includin
 See the ```untested/``` directory for a few more including SSL config versions I haven't got round to testing yet but should work.
 
 See also ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies.
+
+This repo is forked from the haproxy directory of the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) which it has now replaced as a submodule. These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
