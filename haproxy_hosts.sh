@@ -4,7 +4,7 @@
 #  Author: Hari Sekhon
 #  Date: 2018-01-16 17:23:27 +0000 (Tue, 16 Jan 2018)
 #
-#  https://github.com/harisekhon/nagios-plugins
+#  https://github.com/harisekhon/haproxy-configs
 #
 #  License: see accompanying Hari Sekhon LICENSE file
 #
