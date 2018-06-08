@@ -16,17 +16,17 @@ All configurations should not be run together on the same HAProxy host as some o
 Configurations are split by service in the form of ```<service>.cfg``` for mix-and-match convenience and must be combined with ```10-global.cfg``` settings like so:
 
 ```
-haproxy -f 10-globals.cfg -f elasticsearch.cfg
+haproxy -f 10-global.cfg -f elasticsearch.cfg
 ```
 
 If you want to add a stats / admin UI then include the ```20-stats.cfg``` configuration:
 ```
-haproxy -f 10-globals.cfg -f 20-stats.cfg -f elasticsearch.cfg
+haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg
 ```
 
 For multiple services just add those service configurations to the command line options:
 ```
-haproxy -f 10-globals.cfg -f 20-stats.cfg -f elasticsearch.cfg -f solrcloud.cfg
+haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg -f solrcloud.cfg
 ```
 
 Common backend server addresses have been pre-populated for convenience including:
