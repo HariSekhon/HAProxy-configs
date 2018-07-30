@@ -5,7 +5,7 @@ Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase,
 
 They are designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
 
-These configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
+Forked from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) for which this is now a sub-module, these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
 
 They can be combined with VRRP-based High Availability solutions to create full production-grade High Availability load balancer solutions and come pre-tuned with advanced health checks and relevant settings, as well as some protections such as limiting access to these services to only private IP addressing schemes as they should rarely be accessed outside your private network.
 
