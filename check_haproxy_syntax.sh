@@ -87,6 +87,7 @@ if which haproxy &>/dev/null; then
     if [[ $haproxy_version < 1.7 ]]; then
         echo
         echo 'WARNING: HAProxy version too old to test these configs!!'
+        untrap
         exit 0
     fi
     set -o pipefail
