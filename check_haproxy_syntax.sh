@@ -34,11 +34,7 @@ configs_without_acls="
 http.cfg
 "
 
-cleanup(){
-    untrap
-    # kill remaining child procs
-    pkill -9 -P $$ || :
-}
+ppid=$$
 
 test_haproxy_conf(){
     local cfg="$1"
@@ -48,14 +44,14 @@ test_haproxy_conf(){
         if ! grep -q "^$cfg$" <<< "$configs_without_acls"; then
             if ! grep -q -e '^[[:space:]]*acl internal_networks src 192.168.0.0/16 172.16.0.0/12 10.0.0.0/8 127.0.0.1$' "$cfg"; then
                 echo "ERROR: No internal networks ACL defined in config $cfg"
-                cleanup
+                kill $ppid
                 exit 1
             fi
             # leave unanchored at end to allow elasticsearch-auth.cfg to append auth_ok ACLs
             if ! grep -q -e '^[[:space:]]*http-request deny if ! internal_networks' \
                          -e '^[[:space:]]*tcp-request content reject if ! internal_networks$' "$cfg"; then
                 echo "ERROR: No ACL defined in config $cfg"
-                cleanup
+                kill $ppid
                 exit 1
             fi
         fi
@@ -64,7 +60,7 @@ test_haproxy_conf(){
             num_option_log=$(egrep "^[[:space:]]*option[[:space:]]+${mode}log" "$cfg" | wc -l | sed 's/[[:space:]]*//g'; :)
             if [ "$num_mode" != "$num_option_log" ]; then
                 echo "ERROR: missing advanced logging options in $cfg"
-                cleanup
+                kill $ppid
                 exit 1
             fi
         done
@@ -73,9 +69,8 @@ test_haproxy_conf(){
         echo
         echo "Error:"
         echo
-        haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg"
-        #cleanup
-        exit 1
+        haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg" || :
+        kill $ppid
     fi
 }
 
@@ -103,9 +98,17 @@ if which haproxy &>/dev/null; then
         # slow due to all the DNS lookup failures for alternative haproxy services DNS names so aggressively parallelizing
         test_haproxy_conf "$cfg" &
     done
+    # this waits for all children but returns zero if even one of the children returns non-zero so we kill our own process from the child as a workaround
     wait
+    # race condition as first child finishes before this loop starts and can't test for their existence as there would be a race condition between the check and wait command
+    #for num in `seq ${#configs}`; do
+    #    wait $num
+    #done
 elif is_CI; then
     echo "FAILED: haproxy is not installed"
     exit 1
 fi
+echo
+echo "All HAProxy Configurations Passed Checks"
+echo
 untrap
