@@ -19,7 +19,7 @@ srcdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 haproxy_srcdir="$srcdir"
 
-. "$srcdir/../bash-tools/utils.sh"
+. "$srcdir/bash-tools/utils.sh"
 
 section "HAProxy Configs"
 
