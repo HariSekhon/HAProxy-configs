@@ -21,8 +21,8 @@ sudo: false
 notifications:
   email: false
 
-env:
-  - DEBUG=1
+#env:
+#  - DEBUG=1
 
 install:
   - sudo apt-get install -y haproxy
