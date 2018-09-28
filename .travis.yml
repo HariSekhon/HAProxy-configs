@@ -22,7 +22,6 @@ notifications:
   email: false
 
 install:
-  - apt-get install -y haproxy
   - ./check_haproxy_syntax.sh
 
 #script:
