@@ -100,5 +100,8 @@ if which haproxy &>/dev/null; then
         test_haproxy_conf "$cfg" &
     done
     wait
+elif is_CI; then
+    echo "FAILED: haproxy is not installed"
+    exit 1
 fi
 untrap
