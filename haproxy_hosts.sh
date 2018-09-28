@@ -18,6 +18,8 @@
 set -euo pipefail
 [ -n "${DEBUG:-}" ] && set -x
 
+cd `dirname $0`
+
 grep -h '^[[:space:]]*server' *.cfg */*.cfg |
 awk '{print $3}' |
 sed 's/:.[[:digit:]]*//' |
