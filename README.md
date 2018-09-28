@@ -1,5 +1,6 @@
 Advanced HAProxy Configurations for Big Data, NoSQL and Web technologies
 ===============================
+[![Build Status](https://travis-ci.org/HariSekhon/haproxy-configs.svg?branch=master)](https://travis-ci.org/HariSekhon/haproxy-configs)
 
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
