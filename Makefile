@@ -4,7 +4,7 @@
 #
 #  vim:ts=4:sts=4:sw=4:noet
 #
-#  https://github.com/HariSekhon/haproxy-configs
+#  https://github.com/harisekhon/haproxy-configs
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback
 #
