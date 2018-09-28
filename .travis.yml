@@ -21,6 +21,9 @@ sudo: false
 notifications:
   email: false
 
+env:
+  - DEBUG=1
+
 install:
   - sudo apt-get install -y haproxy
   - ./check_haproxy_syntax.sh
