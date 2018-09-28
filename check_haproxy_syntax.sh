@@ -86,6 +86,10 @@ else
 fi
 
 if which haproxy &>/dev/null; then
+    set +o pipefail
+    haproxy 2>/dev/null | head -n1
+    set -o pipefail
+    echo
     cd "$haproxy_srcdir"
     echo
     maxwidth=0
