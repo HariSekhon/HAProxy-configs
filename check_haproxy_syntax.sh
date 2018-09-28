@@ -83,6 +83,12 @@ fi
 if which haproxy &>/dev/null; then
     set +o pipefail
     haproxy 2>/dev/null | head -n1
+    haproxy_version="$(haproxy 2>/dev/null | head -n1 | awk '{print $2}' | awk '{print $1"."$2}')"
+    if [[ $haproxy_version < 1.7 ]]; then
+        echo
+        echo 'WARNING: HAProxy version too to test these configs!!'
+        exit 0
+    fi
     set -o pipefail
     echo
     cd "$haproxy_srcdir"
