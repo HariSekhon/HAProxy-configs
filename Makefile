@@ -11,10 +11,46 @@
 #  https://www.linkedin.com/in/harisekhon
 #
 
+SUDO := sudo
+
+# must come after to reset SUDO_PERL/SUDO_PIP to blank if root
+# EUID /  UID not exported in Make
+# USER not populated in Docker
+ifeq '$(shell id -u)' '0'
+	#@echo "root UID detected, not calling sudo"
+	SUDO :=
+endif
+
 .PHONY: build
-build:
-	git submodule init
-	git submodule update --recursive
+build: system-packages
+	git submodule update --init --recursive
+
+.PHONY: system-packages
+system-packages:
+	if [ -x /sbin/apk ];        then $(MAKE) apk-packages; fi
+	if [ -x /usr/bin/apt-get ]; then $(MAKE) apt-packages; fi
+	if [ -x /usr/bin/yum ];     then $(MAKE) yum-packages; fi
+	if [ -x /usr/local/bin/brew -a `uname` = Darwin ]; then $(MAKE) homebrew-packages; fi
+
+.PHONY: apk-packages
+apk-packages:
+	$(SUDO) apk update
+	$(SUDO) apk add haproxy
+
+.PHONY: apt-packages
+apt-packages:
+	$(SUDO) apt-get update
+	$(SUDO) apt-get install -y haproxy
+
+.PHONY: homebrew-packages
+homebrew-packages:
+	# Sudo is not required as running Homebrew as root is extremely dangerous and no longer supported as Homebrew does not drop privileges on installation you would be giving all build scripts full access to your system
+	# Fails if any of the packages are already installed, ignore and continue - if it's a problem the latest build steps will fail with missing headers
+	brew install haproxy
+
+.PHONY: yum-packages
+yum-packages:
+	$(SUDO) yum install -y haproxy
 
 .PHONY: test
 test:
