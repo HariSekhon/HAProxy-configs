@@ -43,12 +43,16 @@ cleanup(){
 test_haproxy_conf(){
     local cfg="$1"
     local str=$(printf "%-${maxwidth}s " "$cfg:")
-    if haproxy -c -f 10-global.cfg -f 20-defaults.cfg -f 30-stats.cfg -f "$cfg" &>/dev/null; then
+    if haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg" &>/dev/null; then
         echo "$str OK"
         if ! grep -q "^$cfg$" <<< "$configs_without_acls"; then
-            if ! grep -q -e '^[[:space:]]*acl internal_networks src 192.168.0.0/16 172.16.0.0/16 10.0.0.0/8 127.0.0.1$' "$cfg" ||
-               # leave unanchored at end to allow elasticsearch-auth.cfg to append auth_ok ACLs
-               ! grep -q -e '^[[:space:]]*http-request deny if ! internal_networks' \
+            if ! grep -q -e '^[[:space:]]*acl internal_networks src 192.168.0.0/16 172.16.0.0/12 10.0.0.0/8 127.0.0.1$' "$cfg"; then
+                echo "ERROR: No internal networks ACL defined in config $cfg"
+                cleanup
+                exit 1
+            fi
+            # leave unanchored at end to allow elasticsearch-auth.cfg to append auth_ok ACLs
+            if ! grep -q -e '^[[:space:]]*http-request deny if ! internal_networks' \
                          -e '^[[:space:]]*tcp-request content reject if ! internal_networks$' "$cfg"; then
                 echo "ERROR: No ACL defined in config $cfg"
                 cleanup
@@ -70,7 +74,7 @@ test_haproxy_conf(){
         echo "Error:"
         echo
         cleanup
-        haproxy -c -f 10-global.cfg -f 20-defaults.cfg -f 30-stats.cfg -f "$cfg"
+        haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg"
         exit 1
     fi
 }
