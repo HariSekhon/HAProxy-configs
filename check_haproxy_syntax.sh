@@ -73,8 +73,8 @@ test_haproxy_conf(){
         echo
         echo "Error:"
         echo
-        cleanup
         haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg"
+        cleanup
         exit 1
     fi
 }
