@@ -16,7 +16,7 @@
 # there's no 'language: bash'
 language: generic
 
-sudo: false
+sudo: true
 
 notifications:
   email: false
@@ -25,8 +25,8 @@ notifications:
 #  - DEBUG=1
 
 install:
-  - sudo apt-get install -y haproxy
-  - ./check_haproxy_syntax.sh
+  - travis_retry make
 
-#script:
-#  - travis_retry make test
+# Travis CI build has HAProxy 1.4 which is far too old to use, tests fail due to newer unrecognized config options
+script:
+  - make test
