@@ -66,7 +66,8 @@ See the ```untested/``` directory for a few more including SSL config versions I
 
 ### See Also
 
-See also ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies.
+- ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
+- The [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) - contains many API tests for these technologies and is used to test these configurations by testing each official technology by accessing through live running HAProxies running these configurations to ensure these configs work end-to-end.
 
 
 ### Testing
