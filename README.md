@@ -64,12 +64,12 @@ These addresses are used in Continuous Integration tests run on this repo from t
 See the ```untested/``` directory for a few more including SSL config versions I haven't got round to testing yet but should work.
 
 
+### Tests
+
+Forked to a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection). These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
+
+
 ### See Also
 
 - ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
 - The [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) - contains many API tests for these technologies and is used to test these configurations by testing each official technology by accessing through live running HAProxies running these configurations to ensure these configs work end-to-end.
-
-
-### Testing
-
-Forked to a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection). These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
