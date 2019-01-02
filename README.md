@@ -4,15 +4,26 @@ Advanced HAProxy Configs for Big Data, NoSQL and Web technologies
 
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
-They are designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
+Designed both for **production-grade High Availability** and also to make scripting and monitoring easier when connecting to APIs.
 
-Forked from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) for which this is now a sub-module, these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
+Forked as a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection), these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
 
-They can be combined with VRRP-based High Availability solutions to create full production-grade High Availability load balancer solutions and come pre-tuned with advanced health checks and relevant settings, as well as some protections such as limiting access to these services to only private IP addressing schemes as they should rarely be accessed outside your private network.
+**Recommended to run with High Availability HAProxy using VRRP to create full production-grade High Availability load balancer solutions.**
 
-You should use an expert consultant to tune to your needs but these should be extremely close to your finished production configurations.
+### Features
 
-All configurations should not be run together on the same HAProxy host as some of these technologies use the same port numbers by default, for example Ambari and Presto both default to port 8080, so you would have to modify at least the frontend HAProxy bind addresses if proxying both of those services on the same HAProxy host(s).
+Each config comes pre-tuned with:
+
+1. Specialised Health Checks per technology's API
+2. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
+3. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
+4. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
+5. Additional logging
+6. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
+
+You should use an expert consultant to fine tune to your needs but these should be extremely close to your finished production configurations. **In most cases all you need to do is put in your addresses for the backend servers**.
+
+If running certain configurations together on the same HAProxy host you may need to change the frontend ports for some these technologies which use the same default port numbers (eg. Ambari and Presto both default to port 8080).
 
 Configurations are split by service in the form of ```<service>.cfg``` for mix-and-match convenience and must be combined with ```10-global.cfg``` settings like so:
 
@@ -20,7 +31,7 @@ Configurations are split by service in the form of ```<service>.cfg``` for mix-a
 haproxy -f 10-global.cfg -f elasticsearch.cfg
 ```
 
-If you want to add a stats / admin UI then include the ```20-stats.cfg``` configuration:
+If you want to add a Stats Admin UI then include the ```20-stats.cfg``` configuration (**remember to change the default password in `20-stats.cfg` if sourcing it**):
 ```
 haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg
 ```
@@ -30,16 +41,26 @@ For multiple services just add those service configurations to the command line 
 haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg -f solrcloud.cfg
 ```
 
+### Backend Server Addresses (set these to your cluster hosts)
+
+**In most cases all you'll need to do is add your server addresses in to the backend config and then start HAProxy**.
+
 Common backend server addresses have been pre-populated for convenience including:
 
 - ```<service>``` - generic service name matching the proxied technology - could be resolved by DNS to multiple IPs to be balanced across
 - ```192.168.99.100``` - the common Docker Machine IP address
 - ```docker``` - again DNS resolve to your Docker location
 
-These addresses are used in continuous integration testing of this repo including these HAProxy configurations which are tested by running all the relevant nagios plugins for each service through HAProxy to validate the HAProxy configurations.
+These addresses are used in Continuous Integration tests run on this repo from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection).
+
+### More Configs
 
 See the ```untested/``` directory for a few more including SSL config versions I haven't got round to testing yet but should work.
 
+### See Also
+
 See also ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies.
 
-This repo is forked from the haproxy directory of the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) which it has now replaced as a submodule. These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
+### Testing
+
+Forked to a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection). These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
