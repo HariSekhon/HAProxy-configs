@@ -1,4 +1,4 @@
-Advanced HAProxy Configurations for Big Data, NoSQL and Web technologies
+Advanced HAProxy Configs for Big Data, NoSQL and Web technologies
 ===============================
 [![Build Status](https://travis-ci.org/HariSekhon/haproxy-configs.svg?branch=master)](https://travis-ci.org/HariSekhon/haproxy-configs)
 
