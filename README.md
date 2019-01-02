@@ -10,6 +10,7 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 
 **Recommended to run with High Availability HAProxy using VRRP to create full production-grade High Availability load balancer solutions.**
 
+
 ### Features
 
 Each config comes pre-tuned with:
@@ -23,7 +24,8 @@ Each config comes pre-tuned with:
 
 You should use an expert consultant to fine tune to your needs but these should be extremely close to your finished production configurations. **In most cases all you need to do is put in your addresses for the backend servers**.
 
-If running certain configurations together on the same HAProxy host you may need to change the frontend ports for some these technologies which use the same default port numbers (eg. Ambari and Presto both default to port 8080).
+
+## Usage
 
 Configurations are split by service in the form of ```<service>.cfg``` for mix-and-match convenience and must be combined with ```10-global.cfg``` settings like so:
 
@@ -31,15 +33,18 @@ Configurations are split by service in the form of ```<service>.cfg``` for mix-a
 haproxy -f 10-global.cfg -f elasticsearch.cfg
 ```
 
+For multiple services just add those service configurations to the command line options:
+```
+haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg -f solrcloud.cfg
+```
+
+Some technologies default to the same port number (eg. Ambari and Presto both use port 8080), so if running both on the same HAProxy host then just modify one of the frontend listening port numbers.
+
 If you want to add a Stats Admin UI then include the ```20-stats.cfg``` configuration (**remember to change the default password in `20-stats.cfg` if sourcing it**):
 ```
 haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg
 ```
 
-For multiple services just add those service configurations to the command line options:
-```
-haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg -f solrcloud.cfg
-```
 
 ### Backend Server Addresses (set these to your cluster hosts)
 
@@ -53,13 +58,16 @@ Common backend server addresses have been pre-populated for convenience includin
 
 These addresses are used in Continuous Integration tests run on this repo from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection).
 
+
 ### More Configs
 
 See the ```untested/``` directory for a few more including SSL config versions I haven't got round to testing yet but should work.
 
+
 ### See Also
 
 See also ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies.
+
 
 ### Testing
 
