@@ -4,7 +4,7 @@ Advanced HAProxy Configs for Big Data, NoSQL and Web technologies
 
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
-Designed both for **production-grade High Availability** and also to make scripting and monitoring easier when connecting to APIs.
+Designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
 
 Forked as a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection), these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
 
