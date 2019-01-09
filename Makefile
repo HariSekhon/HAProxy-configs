@@ -63,6 +63,7 @@ update:
 .PHONY: update-no-recompile
 update-no-recompile:
 	git pull
+	git submodule update --init --recursive
 
 .PHONY: clean
 clean:
