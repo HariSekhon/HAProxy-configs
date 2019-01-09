@@ -60,6 +60,10 @@ test:
 update:
 	git pull
 
+.PHONY: update2
+update2: update-no-recompile
+	:
+
 .PHONY: update-no-recompile
 update-no-recompile:
 	git pull
