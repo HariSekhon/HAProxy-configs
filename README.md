@@ -1,4 +1,4 @@
-Advanced HAProxy Configs for Big Data, NoSQL and Web technologies
+Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
 ===============================
 [![Build Status](https://travis-ci.org/HariSekhon/haproxy-configs.svg?branch=master)](https://travis-ci.org/HariSekhon/haproxy-configs)
 
@@ -6,7 +6,7 @@ Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase,
 
 Designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
 
-Forked as a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection), these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [PyTools](https://github.com/harisekhon/pytools) github repos.
+Forked as a submodule from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection), these configurations contain specialised Health Checks for each system based on experience and code from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) and [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) github repos.
 
 **Recommended to run with High Availability HAProxy using VRRP to create full production-grade High Availability load balancer solutions.**
 
