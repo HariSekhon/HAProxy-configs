@@ -76,3 +76,7 @@ clean:
 .PHONY: push
 push:
 	git push
+
+.PHONY: travis
+travis:
+	travis_last_log.py /HAProxy-configs
