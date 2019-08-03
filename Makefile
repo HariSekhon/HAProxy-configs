@@ -11,72 +11,21 @@
 #  https://www.linkedin.com/in/harisekhon
 #
 
-SUDO := sudo
+REPO := HariSekhon/HAProxy-configs
 
-# must come after to reset SUDO_PERL/SUDO_PIP to blank if root
-# EUID /  UID not exported in Make
-# USER not populated in Docker
-ifeq '$(shell id -u)' '0'
-	#@echo "root UID detected, not calling sudo"
-	SUDO :=
+ifneq ("$(wildcard bash-tools/Makefile.in)", "")
+	include bash-tools/Makefile.in
 endif
 
 .PHONY: build
-build: system-packages
-	git submodule update --init --recursive
-
-.PHONY: system-packages
-system-packages:
-	if [ -x /sbin/apk ];        then $(MAKE) apk-packages; fi
-	if [ -x /usr/bin/apt-get ]; then $(MAKE) apt-packages; fi
-	if [ -x /usr/bin/yum ];     then $(MAKE) yum-packages; fi
-	if [ -x /usr/local/bin/brew -a `uname` = Darwin ]; then $(MAKE) homebrew-packages; fi
-
-.PHONY: apk-packages
-apk-packages:
-	$(SUDO) apk update
-	$(SUDO) apk add haproxy
-
-.PHONY: apt-packages
-apt-packages:
-	$(SUDO) apt-get update
-	$(SUDO) apt-get install -y haproxy
-
-.PHONY: homebrew-packages
-homebrew-packages:
-	# Sudo is not required as running Homebrew as root is extremely dangerous and no longer supported as Homebrew does not drop privileges on installation you would be giving all build scripts full access to your system
-	# Fails if any of the packages are already installed, ignore and continue - if it's a problem the latest build steps will fail with missing headers
-	brew install haproxy
-
-.PHONY: yum-packages
-yum-packages:
-	$(SUDO) yum install -y haproxy
+# space here prevents weird validation warning from check_makefile.sh => Makefile:40: warning: undefined variable `D'
+build : submodules system-packages
+	:
 
 .PHONY: test
 test:
 	./check_haproxy_syntax.sh
 
-.PHONY: update
-update:
-	git pull
-
-.PHONY: update2
-update2: update-no-recompile
-	:
-
-.PHONY: update-no-recompile
-update-no-recompile:
-	git pull
-	git submodule update --init --recursive
-
 .PHONY: clean
 clean:
 	@echo Nothing to clean
-
-.PHONY: push
-push:
-	git push
-
-.PHONY: travis
-travis:
-	travis_last_log.py /HAProxy-configs
