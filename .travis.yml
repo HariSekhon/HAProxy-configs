@@ -16,6 +16,8 @@
 # there's no 'language: bash'
 language: generic
 
+dist: trusty
+
 sudo: true
 
 notifications:
