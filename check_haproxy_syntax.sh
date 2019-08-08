@@ -19,6 +19,7 @@ srcdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 haproxy_srcdir="$srcdir"
 
+# shellcheck disable=SC1090
 . "$srcdir/bash-tools/lib/utils.sh"
 
 section "HAProxy Configs"
@@ -28,7 +29,8 @@ echo
 echo "(requires HAProxy 1.7+ to be able to skip any unresolvable DNS entries)"
 echo
 
-trap "pkill -9 -P $$; exit 1" $TRAP_SIGNALS
+# shellcheck disable=SC2086
+trap 'pkill -9 -P $$; exit 1' $TRAP_SIGNALS
 
 configs_without_acls="
 http.cfg
@@ -38,7 +40,8 @@ ppid=$$
 
 test_haproxy_conf(){
     local cfg="$1"
-    local str=$(printf "%-${maxwidth}s " "$cfg:")
+    local str
+    str="$(printf "%-${maxwidth}s " "$cfg:")"
     if haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg" &>/dev/null; then
         echo "$str OK"
         if ! grep -q "^$cfg$" <<< "$configs_without_acls"; then
@@ -55,15 +58,21 @@ test_haproxy_conf(){
                 exit 1
             fi
         fi
-        for mode in tcp http; do
-            num_mode=$(egrep "^[[:space:]]*mode[[:space:]]+$mode" "$cfg" | wc -l | sed 's/[[:space:]]*//g'; :)
-            num_option_log=$(egrep "^[[:space:]]*option[[:space:]]+${mode}log" "$cfg" | wc -l | sed 's/[[:space:]]*//g'; :)
-            if [ "$num_mode" != "$num_option_log" ]; then
-                echo "ERROR: missing advanced logging options in $cfg"
-                kill $ppid
-                exit 1
-            fi
-        done
+        #for mode in tcp http; do
+            # backends don't respect the advanced logging options any more so have been removed from backends so it's no longer 1 to 1
+            #num_mode=$(grep -Ec "^[[:space:]]*mode[[:space:]]+$mode" "$cfg" || :)
+            #num_option_log=$(grep -Ec "^[[:space:]]*option[[:space:]]+${mode}log" "$cfg" || :)
+            #if [ "$num_mode" != "$num_option_log" ]; then
+            #    echo "ERROR: missing advanced logging options in $cfg"
+            #    kill $ppid
+            #    exit 1
+            #fi
+        #done
+        if grep -E "^[[:space:]]*mode[[:space:]]+tcp" && ! grep -Ec "^[[:space:]]*option[[:space:]]+tcplog" "$cfg"; then
+            echo "ERROR: missing advanced logging options in $cfg"
+            kill $ppid
+            exit 1
+        fi
     else
         echo "$str FAILED"
         echo
@@ -75,16 +84,16 @@ test_haproxy_conf(){
 }
 
 if [ $# -gt 0 ]; then
-    configs="$@"
+    configs="$*"
 else
-    configs="$(echo [a-z]*.cfg */*.cfg)"
+    configs="$(echo [a-z]*.cfg ./*/*.cfg)"
 fi
 
-if which haproxy &>/dev/null; then
+if command -v haproxy &>/dev/null; then
     set +o pipefail
     haproxy 2>/dev/null | head -n1
     haproxy_version="$(haproxy 2>/dev/null | head -n1 | awk '{print $3}' | awk -F. '{print $1"."$2}')"
-    if [[ $haproxy_version < 1.7 ]]; then
+    if [ "$(bc <<< "$haproxy_version < 1.7")" = 1 ]; then
         echo
         echo 'WARNING: HAProxy version too old to test these configs!!'
         untrap
@@ -100,7 +109,7 @@ if which haproxy &>/dev/null; then
             maxwidth="${#cfg}"
         fi
     done
-    let maxwidth+=1
+    ((maxwidth+=1))
     for cfg in $configs; do
         # slow due to all the DNS lookup failures for alternative haproxy services DNS names so aggressively parallelizing
         test_haproxy_conf "$cfg" &
