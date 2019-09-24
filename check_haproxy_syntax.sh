@@ -120,11 +120,14 @@ if command -v haproxy &>/dev/null; then
     #for num in `seq ${#configs}`; do
     #    wait $num
     #done
+    echo
+    echo "All HAProxy Configurations Passed Checks"
 elif is_CI; then
     echo "FAILED: haproxy is not installed"
     exit 1
+else
+    echo
+    echo "WARNING: HAProxy configurations NOT TESTED (haproxy not found in path, please install first)"
 fi
-echo
-echo "All HAProxy Configurations Passed Checks"
 echo
 untrap
