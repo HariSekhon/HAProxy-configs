@@ -22,6 +22,11 @@ endif
 build : submodules system-packages
 	:
 
+.PHONY: install
+# space here prevents weird validation warning from check_makefile.sh => Makefile:40: warning: undefined variable `D'
+install: build
+	@:
+
 .PHONY: test
 test:
 	./check_haproxy_syntax.sh
