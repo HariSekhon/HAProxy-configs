@@ -29,7 +29,7 @@ install: build
 
 .PHONY: test
 test:
-	./check_haproxy_syntax.sh
+	@./check_haproxy_syntax.sh
 
 .PHONY: clean
 clean:
