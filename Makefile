@@ -11,11 +11,11 @@
 #  https://www.linkedin.com/in/harisekhon
 #
 
-REPO := HariSekhon/HAProxy-configs
-
 ifneq ("$(wildcard bash-tools/Makefile.in)", "")
 	include bash-tools/Makefile.in
 endif
+
+REPO := HariSekhon/HAProxy-configs
 
 .PHONY: build
 # space here prevents weird validation warning from check_makefile.sh => Makefile:40: warning: undefined variable `D'
