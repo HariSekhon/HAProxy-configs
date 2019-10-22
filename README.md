@@ -53,7 +53,7 @@ haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
 Common backend server addresses have been pre-populated for convenience including:
 
 - ```<service>``` - generic service name matching the proxied technology - could be resolved by DNS to multiple IPs to be balanced across
-- ```192.168.99.100``` - the common Docker Machine / MiniKube / MiniShift IP address
+- ```192.168.99.100``` - the common [Docker Machine](https://docs.docker.com/machine/overview/) / [MiniKube](https://minikube.sigs.k8s.io) / [MiniShift](https://www.okd.io/minishift/) IP address
 - ```docker``` - convenient to use DNS or `/etc/hosts` to point this to your Docker host
 
 These addresses are used in Continuous Integration tests run on this repo from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection).
