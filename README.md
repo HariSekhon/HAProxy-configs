@@ -71,5 +71,12 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 
 ### See Also
 
-- ```find_active_server.py``` from my [PyTools](https://github.com/harisekhon/pytools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
-- The [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection) - contains many API tests for these technologies and is used to test these configurations by testing each official technology by accessing through live running HAProxies running these configurations to ensure these configs work end-to-end.
+- ```find_active_server.py``` from the [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
+
+* [The Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) - 450+ programs for Hadoop, Docker, Kafka, Elasticsearch, RabbitMQ, Redis, HBase, Solr, Cassandra, ZooKeeper, HDFS, Yarn, Hive, Presto, Drill, Impala, Consul, Spark, Jenkins, Travis CI, Git, MySQL, Linux, DNS, Whois, SSL Certs, Yum Security Updates, Kubernetes, Mesos, Riak, MongoDB, Memcached, Couchbase, CouchDB, Neo4j, Ambari, Cloudera, Hortonworks, MapR etc. Contains many API tests for these technologies and is used to test these configurations by testing each official technology by accessing through live running HAProxies running these configurations to ensure these configs work end-to-end.
+
+* [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) - 75+ DevOps tools for Hadoop, HBase, Spark (PySpark), Pig => Solr / Elasticsearch indexers, Pig Jython UDFs, Ambari Blueprints, AWS CloudFormation templates, Linux, IPython Notebook, Data converters between different data formats and syntactic validators for Avro, Parquet, CSV, JSON, INI (Java Properties), LDAP LDIF, XML, YAML...
+
+* [DevOps Perl Tools](https://github.com/harisekhon/perl-tools) - 25+ DevOps CLI tools for Hadoop, HDFS, Hive, Solr/SolrCloud CLI, Log Anonymizer, Nginx stats & HTTP(S) URL watchers for load balanced web farms, Dockerfiles & SQL ReCaser (Hive, Impala, MySQL, PostgreSQL, Cassandra CQL, Apache Drill, Couchbase N1QL, Microsoft SQL Server, Oracle, Pig Latin, Neo4j, InfluxDB), Ambari FreeIPA Kerberos, Datameer, Linux...
+
+* [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools) - 80+ DevOps Bash scripts, advanced `.bashrc`, `.vimrc`, `.screenrc`, `.tmux.conf`, `.toprc`, Utility Code Library used by CI and all my GitHub repos - includes code for AWS, Kubernetes, Kafka, Docker, Git, Code & build linting, package management for Linux / Mac / Perl / Python / Ruby / Golang, and lots more random goodies
