@@ -54,7 +54,7 @@ Common backend server addresses have been pre-populated for convenience includin
 
 - ```<service>``` - generic service name matching the proxied technology - could be resolved by DNS to multiple IPs to be balanced across
 - ```192.168.99.100``` - the common Docker Machine / MiniKube / MiniShift IP address
-- ```docker``` - again DNS resolve to your Docker location
+- ```docker``` - convenient to use DNS / `/etc/hosts` to point this to your Docker host
 
 These addresses are used in Continuous Integration tests run on this repo from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection).
 
