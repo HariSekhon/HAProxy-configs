@@ -13,6 +13,8 @@
 #  http://www.linkedin.com/in/harisekhon
 #
 
+version: ~> 1.0
+
 # there's no 'language: bash'
 language: generic
 
