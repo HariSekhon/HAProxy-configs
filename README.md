@@ -10,6 +10,14 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 
 **Recommended to run with High Availability HAProxy using VRRP to create full production-grade High Availability load balancer solutions.**
 
+Hari Sekhon
+
+Cloud & Big Data Contractor, United Kingdom
+
+(ex-Cloudera, former Hortonworks Consultant)
+
+https://www.linkedin.com/in/harisekhon
+###### (you're welcome to connect with me on LinkedIn)
 
 ### Features
 
