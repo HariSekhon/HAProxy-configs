@@ -1,6 +1,13 @@
 Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
 ===============================
 [![Build Status](https://travis-ci.org/HariSekhon/HAProxy-configs.svg?branch=master)](https://travis-ci.org/HariSekhon/HAProxy-configs)
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs.svg)](https://github.com/harisekhon/HAProxy-configs/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs.svg)](https://github.com/harisekhon/HAProxy-configs/network)
+
+[![CI Mac](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Mac/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Mac%22)
+[![CI Ubuntu](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Ubuntu/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Ubuntu%22)
+[![CI CentOS](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20CentOS/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+CentOS%22)
+[![CI Alpine](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Alpine/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Alpine%22)
 
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
