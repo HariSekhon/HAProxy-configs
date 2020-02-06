@@ -14,4 +14,7 @@
 # ============================================================================ #
 
 haproxy
-bc  # to check haproxy version for tests
+
+# to check haproxy version for tests
+bash
+bc
