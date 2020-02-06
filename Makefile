@@ -18,9 +18,23 @@ endif
 REPO := HariSekhon/HAProxy-configs
 
 .PHONY: build
+build:
+	@echo =========================
+	@echo HAProxy Configs Build
+	@echo =========================
+
+	$(MAKE) init
+	if [ -z "$(CPANM)" ]; then make; exit $$?; fi
+	$(MAKE) system-packages
+
+.PHONY: init
+init:
+	git submodule update --init --recursive
+
+#.PHONY: build
 # space here prevents weird validation warning from check_makefile.sh => Makefile:40: warning: undefined variable `D'
-build : submodules system-packages
-	:
+#build : submodules system-packages
+#	:
 
 .PHONY: install
 # space here prevents weird validation warning from check_makefile.sh => Makefile:40: warning: undefined variable `D'
