@@ -46,12 +46,12 @@ Cloud & Big Data Contractor, United Kingdom
 
 Each config comes pre-tuned with:
 
-1. Specialised Health Checks per technology's API
-2. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
-3. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
-4. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
-5. Additional logging
-6. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
+  1. Specialised Health Checks per technology's API
+  2. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
+  3. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
+  4. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
+  5. Additional logging
+  6. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
 
 You should use an expert consultant to fine tune to your needs but these should be extremely close to your finished production configurations. **In most cases all you need to do is put in your addresses for the backend servers**.
 
