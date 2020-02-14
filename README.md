@@ -60,20 +60,20 @@ You should use an expert consultant to fine tune to your needs but these should 
 
 Configurations are split by service in the form of ```<service>.cfg``` for mix-and-match convenience and must be combined with ```10-global.cfg``` settings like so:
 
-```
-haproxy -f 10-global.cfg -f elasticsearch.cfg
+```sh
+$ haproxy -f 10-global.cfg -f elasticsearch.cfg
 ```
 
 For multiple services just add those service configurations to the command line options:
-```
-haproxy -f 10-global.cfg -f elasticsearch.cfg -f solrcloud.cfg
+```sh
+$ haproxy -f 10-global.cfg -f elasticsearch.cfg -f solrcloud.cfg
 ```
 
 Some technologies default to the same port number (eg. Ambari and Presto both use port 8080), so if running both on the same HAProxy host then just modify one of the frontend listening port numbers.
 
 If you want to add a Stats Admin UI then include the ```20-stats.cfg``` configuration (**remember to change the default password `test`**):
-```
-haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
+```sh
+$ haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
 ```
 
 
