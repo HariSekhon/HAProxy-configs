@@ -14,3 +14,7 @@
 # ============================================================================ #
 
 haproxy
+
+# to check haproxy version for tests
+#bash  # installed by bash-tools submodule now
+bc

@@ -1,6 +1,27 @@
 Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
 ===============================
 [![Build Status](https://travis-ci.org/HariSekhon/HAProxy-configs.svg?branch=master)](https://travis-ci.org/HariSekhon/HAProxy-configs)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f24e17486db64270b4ae9c10f7f2bf84)](https://www.codacy.com/app/harisekhon/haproxy-configs)
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs.svg)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs.svg)](https://github.com/HariSekhon/HAProxy-configs/network)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20OS%20X-blue.svg)](https://github.com/HariSekhon/HAProxy-configs)
+
+[![CI Mac](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Mac/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Mac%22)
+[![CI Ubuntu](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Ubuntu/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Ubuntu%22)
+[![CI Ubuntu 14.04](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Ubuntu%2014.04/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Ubuntu+14.04%22)
+[![CI Ubuntu 16.04](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Ubuntu%2016.04/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Ubuntu+16.04%22)
+[![CI Ubuntu 18.04](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Ubuntu%2018.04/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Ubuntu+18.04%22)
+[![CI Debian](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Debian/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Debian%22)
+[![CI Debian 8](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Debian%208/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Debian+8%22)
+[![CI Debian 9](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Debian%209/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Debian+9%22)
+[![CI Debian 10](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Debian%2010/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Debian+10%22)
+[![CI CentOS](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20CentOS/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+CentOS%22)
+[![CI CentOS 6](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20CentOS%206/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+CentOS+6%22)
+[![CI CentOS 7](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20CentOS%207/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+CentOS+7%22)
+[![CI CentOS 8](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20CentOS%208/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+CentOS+8%22)
+[![CI Fedora](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Fedora/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Fedora%22)
+[![CI Alpine](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Alpine/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Alpine%22)
+[![CI Alpine 3](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Alpine%203/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Alpine+3%22)
 
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
@@ -10,17 +31,25 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 
 **Recommended to run with High Availability HAProxy using VRRP to create full production-grade High Availability load balancer solutions.**
 
+Hari Sekhon
+
+Cloud & Big Data Contractor, United Kingdom
+
+(ex-Cloudera, former Hortonworks Consultant)
+
+[https://www.linkedin.com/in/harisekhon](https://www.linkedin.com/in/harisekhon)
+###### (you're welcome to connect with me on LinkedIn)
 
 ### Features
 
 Each config comes pre-tuned with:
 
-1. Specialised Health Checks per technology's API
-2. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
-3. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
-4. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
-5. Additional logging
-6. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
+  1. Specialised Health Checks per technology's API
+  2. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
+  3. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
+  4. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
+  5. Additional logging
+  6. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
 
 You should use an expert consultant to fine tune to your needs but these should be extremely close to your finished production configurations. **In most cases all you need to do is put in your addresses for the backend servers**.
 
@@ -29,20 +58,20 @@ You should use an expert consultant to fine tune to your needs but these should 
 
 Configurations are split by service in the form of ```<service>.cfg``` for mix-and-match convenience and must be combined with ```10-global.cfg``` settings like so:
 
-```
-haproxy -f 10-global.cfg -f elasticsearch.cfg
+```sh
+$ haproxy -f 10-global.cfg -f elasticsearch.cfg
 ```
 
 For multiple services just add those service configurations to the command line options:
-```
-haproxy -f 10-global.cfg -f elasticsearch.cfg -f solrcloud.cfg
+```sh
+$ haproxy -f 10-global.cfg -f elasticsearch.cfg -f solrcloud.cfg
 ```
 
 Some technologies default to the same port number (eg. Ambari and Presto both use port 8080), so if running both on the same HAProxy host then just modify one of the frontend listening port numbers.
 
 If you want to add a Stats Admin UI then include the ```20-stats.cfg``` configuration (**remember to change the default password `test`**):
-```
-haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
+```sh
+$ haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
 ```
 
 
@@ -52,9 +81,9 @@ haproxy -f 10-global.cfg -f 20-stats.cfg -f elasticsearch.cfg ...
 
 Common backend server addresses have been pre-populated for convenience including:
 
-- ```<service>``` - generic service name matching the proxied technology - could be resolved by DNS to multiple IPs to be balanced across
-- ```192.168.99.100``` - the common [Docker Machine](https://docs.docker.com/machine/overview/) / [MiniKube](https://minikube.sigs.k8s.io) / [MiniShift](https://www.okd.io/minishift/) IP address
-- ```docker``` - convenient to use DNS or `/etc/hosts` to point this to your Docker host
+  - ```<service>``` - generic service name matching the proxied technology - could be resolved by DNS to multiple IPs to be balanced across
+  - ```192.168.99.100``` - the common [Docker Machine](https://docs.docker.com/machine/overview/) / [MiniKube](https://minikube.sigs.k8s.io) / [MiniShift](https://www.okd.io/minishift/) IP address
+  - ```docker``` - convenient to use DNS or `/etc/hosts` to point this to your Docker host
 
 These addresses are used in Continuous Integration tests run on this repo from the [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins#advanced-nagios-plugins-collection).
 
@@ -71,12 +100,18 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 
 ### See Also
 
-- ```find_active_server.py``` from the [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
+* ```find_active_server.py``` from the [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) repo and its related adjacent programs for on-the-fly command line determination of active masters or first responding peers across many of these same technologies
 
-* [The Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) - 450+ programs for Hadoop, Docker, Kafka, Elasticsearch, RabbitMQ, Redis, HBase, Solr, Cassandra, ZooKeeper, HDFS, Yarn, Hive, Presto, Drill, Impala, Consul, Spark, Jenkins, Travis CI, Git, MySQL, Linux, DNS, Whois, SSL Certs, Yum Security Updates, Kubernetes, Mesos, Riak, MongoDB, Memcached, Couchbase, CouchDB, Neo4j, Ambari, Cloudera, Hortonworks, MapR etc. Contains many API tests for these technologies and is used to test these configurations by testing each official technology by accessing through live running HAProxies running these configurations to ensure these configs work end-to-end.
+* [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) - 80+ DevOps CLI tools for AWS, Hadoop, HBase, Spark, Log Anonymizer, Ambari Blueprints, AWS CloudFormation, Linux, Docker, Spark Data Converters & Validators (Avro / Parquet / JSON / CSV / INI / XML / YAML), Elasticsearch, Solr, Travis CI, Pig, IPython
 
-* [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) - 75+ DevOps tools for Hadoop, HBase, Spark (PySpark), Pig => Solr / Elasticsearch indexers, Pig Jython UDFs, Ambari Blueprints, AWS CloudFormation templates, Linux, IPython Notebook, Data converters between different data formats and syntactic validators for Avro, Parquet, CSV, JSON, INI (Java Properties), LDAP LDIF, XML, YAML...
+* [The Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) - 450+ programs for Nagios monitoring your Hadoop & NoSQL clusters. Covers every Hadoop vendor's management API and every major NoSQL technology (HBase, Cassandra, MongoDB, Elasticsearch, Solr, Riak, Redis etc.) as well as message queues (Kafka, RabbitMQ), continuous integration (Jenkins, Travis CI) and traditional infrastructure (SSL, Whois, DNS, Linux)
+
+* [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools) - 100+ DevOps Bash scripts, advanced `.bashrc`, `.vimrc`, `.screenrc`, `.tmux.conf`, `.toprc`, Utility Code Library used by CI and all my GitHub repos - includes code for AWS, Kubernetes, Kafka, Docker, Git, Code & build linting, package management for Linux / Mac / Perl / Python / Ruby / Golang, and lots more random goodies
 
 * [DevOps Perl Tools](https://github.com/harisekhon/perl-tools) - 25+ DevOps CLI tools for Hadoop, HDFS, Hive, Solr/SolrCloud CLI, Log Anonymizer, Nginx stats & HTTP(S) URL watchers for load balanced web farms, Dockerfiles & SQL ReCaser (Hive, Impala, MySQL, PostgreSQL, Cassandra CQL, Apache Drill, Couchbase N1QL, Microsoft SQL Server, Oracle, Pig Latin, Neo4j, InfluxDB), Ambari FreeIPA Kerberos, Datameer, Linux...
 
-* [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools) - 80+ DevOps Bash scripts, advanced `.bashrc`, `.vimrc`, `.screenrc`, `.tmux.conf`, `.toprc`, Utility Code Library used by CI and all my GitHub repos - includes code for AWS, Kubernetes, Kafka, Docker, Git, Code & build linting, package management for Linux / Mac / Perl / Python / Ruby / Golang, and lots more random goodies
+* [Dockerfiles](https://github.com/HariSekhon/Dockerfiles) - 50+ DockerHub public images for Docker & Kubernetes - Hadoop, Kafka, ZooKeeper, HBase, Cassandra, Solr, SolrCloud, Presto, Apache Drill, Nifi, Spark, Mesos, Consul, Riak, OpenTSDB, Jython, Advanced Nagios Plugins & DevOps Tools repos on Alpine, CentOS, Debian, Fedora, Ubuntu, Superset, H2O, Serf, Alluxio / Tachyon, FakeS3
+
+### Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/HariSekhon/HAProxy-configs.svg)](https://starchart.cc/HariSekhon/HAProxy-configs)

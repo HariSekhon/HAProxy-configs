@@ -93,6 +93,10 @@ if command -v haproxy &>/dev/null; then
     set +o pipefail
     haproxy 2>/dev/null | head -n1
     haproxy_version="$(haproxy 2>/dev/null | head -n1 | awk '{print $3}' | awk -F. '{print $1"."$2}')"
+    if ! type -P bc >/dev/null; then
+        echo "bc command not found, cannot test HAProxy version, skipping tests..."
+        exit 0
+    fi
     if [ "$(bc <<< "$haproxy_version < 1.7")" = 1 ]; then
         echo
         echo 'WARNING: HAProxy version too old to test these configs!!'
