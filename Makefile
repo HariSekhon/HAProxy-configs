@@ -24,7 +24,6 @@ build:
 	@echo =========================
 
 	$(MAKE) init
-	if [ -z "$(CPANM)" ]; then make; exit $$?; fi
 	$(MAKE) system-packages
 
 .PHONY: init
