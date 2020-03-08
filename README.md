@@ -1,5 +1,5 @@
 Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
-===============================
+================================
 
 [![Codacy](https://api.codacy.com/project/badge/Grade/f24e17486db64270b4ae9c10f7f2bf84)](https://www.codacy.com/app/harisekhon/haproxy-configs)
 [![CodeFactor](https://www.codefactor.io/repository/github/harisekhon/HAProxy-configs/badge)](https://www.codefactor.io/repository/github/harisekhon/HAProxy-configs)
