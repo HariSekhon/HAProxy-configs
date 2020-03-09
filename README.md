@@ -1,14 +1,14 @@
 Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
 ================================
 
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs)](https://github.com/HariSekhon/HAProxy-configs/network)
 [![Codacy](https://api.codacy.com/project/badge/Grade/f24e17486db64270b4ae9c10f7f2bf84)](https://www.codacy.com/app/harisekhon/haproxy-configs)
 [![CodeFactor](https://www.codefactor.io/repository/github/harisekhon/HAProxy-configs/badge)](https://www.codefactor.io/repository/github/harisekhon/HAProxy-configs)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=alert_status)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=security_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
-[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs.svg)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs.svg)](https://github.com/HariSekhon/HAProxy-configs/network)
 
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/HAProxy-configs)
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/HAProxy-configs)
