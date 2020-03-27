@@ -27,6 +27,7 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![BuildKite](https://img.shields.io/buildkite/7545b71cb8b21d9bd2edb54efe6a60737eea9cced69e5e77fb/master?label=BuildKite)](https://buildkite.com/hari-sekhon/haproxy-configs)
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/HAProxy-configs/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/HAProxy-configs)
 [![Concourse](https://img.shields.io/badge/Concourse-ready-blue)](https://github.com/HariSekhon/HAProxy-configs/blob/master/.concourse.yml)
+[![GoCD](https://img.shields.io/badge/GoCD-ready-blue)](https://github.com/HariSekhon/HAProxy-configs/blob/master/.gocd.yml)
 
 [![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/HariSekhon.HAProxy-configs?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=10&branchName=master)
 [![BitBucket Pipeline](https://img.shields.io/bitbucket/pipelines/harisekhon/haproxy-configs/master?logo=bitbucket&label=BitBucket)](https://bitbucket.org/harisekhon/haproxy-configs/addon/pipelines/home#!/)
