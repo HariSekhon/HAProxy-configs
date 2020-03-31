@@ -22,6 +22,8 @@ build:
 	@echo =========================
 	@echo HAProxy Configs Build
 	@echo =========================
+	@bash-tools/git_summary_line.sh
+	@echo
 
 	$(MAKE) init
 	$(MAKE) system-packages
