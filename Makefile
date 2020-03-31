@@ -18,14 +18,11 @@ endif
 REPO := HariSekhon/HAProxy-configs
 
 .PHONY: build
-build:
+build: init
 	@echo =========================
 	@echo HAProxy Configs Build
 	@echo =========================
-	@bash-tools/git_summary_line.sh
-	@echo
-
-	$(MAKE) init
+	@$(MAKE) git-summary
 	$(MAKE) system-packages
 
 .PHONY: init
