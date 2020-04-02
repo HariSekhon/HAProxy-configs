@@ -147,3 +147,5 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 ### Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/HariSekhon/HAProxy-configs.svg)](https://starchart.cc/HariSekhon/HAProxy-configs)
+
+[git.io/haproxy-configs](https://git.io/haproxy-configs)
