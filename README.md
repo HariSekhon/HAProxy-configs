@@ -14,7 +14,7 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/HAProxy-configs)
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/HAProxy-configs)
 [![Docker](https://img.shields.io/badge/container-Docker-blue?logo=docker)](https://hub.docker.com/_/haproxy)
-[![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue)](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/STATUS.md)
+[![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
 
 [![Travis CI](https://img.shields.io/travis/harisekhon/HAProxy-configs/master?logo=travis&label=Travis)](https://travis-ci.org/HariSekhon/HAProxy-configs)
 [![AppVeyor](https://img.shields.io/appveyor/build/harisekhon/HAProxy-configs/master?logo=appveyor&label=AppVeyor)](https://ci.appveyor.com/project/HariSekhon/HAProxy-configs/branch/master)
@@ -22,10 +22,10 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![CircleCI](https://circleci.com/gh/HariSekhon/HAProxy-configs.svg?style=svg)](https://circleci.com/gh/HariSekhon/HAProxy-configs)
 [![Codeship Status for HariSekhon/HAProxy-configs](https://app.codeship.com/projects/6e6d6a50-3c5f-0138-6969-1ecbdb7eccb9/status?branch=master)](https://app.codeship.com/projects/387248)
 [![Shippable](https://img.shields.io/shippable/5e52c63645c70f0007ff514e/master?label=Shippable)](https://app.shippable.com/github/HariSekhon/HAProxy-configs/dashboard/jobs)
-[![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FHAProxy-configs?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&type=cf-1)](https://g.codefresh.io/pipelines/HAProxy-configs/builds)
+[![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FHAProxy-configs?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&type=cf-1)](https://g.codefresh.io/pipelines/edit/new/builds?id=5e58e31b3953b7fe454b7904&pipeline=HAProxy-configs&projects=GitHub&projectId=5e52ca8ea284e00f882ea992&context=github&filter=page:1;pageSize:10;timeFrameStart:week)
 [![Wercker](https://app.wercker.com/status/3eab52046f673b476fa5e54adb5dfbba/s/master "wercker status")](https://app.wercker.com/project/byKey/3eab52046f673b476fa5e54adb5dfbba)
 [![buddy pipeline](https://app.buddy.works/harisekhon/haproxy-configs/pipelines/pipeline/246977/badge.svg?token=7f63afa3c423a65e6e39a79be0386959e98c4105ea1e20f7f8b05d6d6b587038 "buddy pipeline")](https://app.buddy.works/harisekhon/haproxy-configs/pipelines/pipeline/246977)
-[![BuildKite](https://img.shields.io/buildkite/7545b71cb8b21d9bd2edb54efe6a60737eea9cced69e5e77fb/master?label=BuildKite)](https://buildkite.com/hari-sekhon/haproxy-configs)
+[![BuildKite](https://img.shields.io/buildkite/0eaa69ea93cc6695ecd48013d1daf895e0e9a7bcef068b7324/master?label=BuildKite)](https://buildkite.com/hari-sekhon/haproxy-configs)
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/HAProxy-configs/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/HAProxy-configs)
 [![Concourse](https://img.shields.io/badge/Concourse-ready-blue)](https://github.com/HariSekhon/HAProxy-configs/blob/master/.concourse.yml)
 [![GoCD](https://img.shields.io/badge/GoCD-ready-blue)](https://github.com/HariSekhon/HAProxy-configs/blob/master/.gocd.yml)
@@ -147,3 +147,5 @@ Forked as a submodule from the [Advanced Nagios Plugins Collection](https://gith
 ### Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/HariSekhon/HAProxy-configs.svg)](https://starchart.cc/HariSekhon/HAProxy-configs)
+
+[git.io/haproxy-configs](https://git.io/haproxy-configs)
