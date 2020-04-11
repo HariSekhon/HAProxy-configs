@@ -38,6 +38,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-haproxy-configs
     - name: build
-      run: make
+      run: make ci
     - name: test
       run: make test
