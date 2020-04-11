@@ -37,6 +37,8 @@ jobs:
         key: ${{ runner.os }}-pip-haproxy-configs  # ${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-haproxy-configs
+    - name: init
+      run: make init
     - name: build
       run: make ci
     - name: test
