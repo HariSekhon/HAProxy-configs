@@ -22,14 +22,16 @@ srcdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # shellcheck disable=SC2034,SC2154
 usage_description="
-Run one of the HAProxy configs
+Run one or more HAProxy configs
 
-Auto-adds the haproxy -f 10-global.cfg -f 20-stats.cfg -f
+Shorter and easier command than doing this manually:
+
+haproxy -f 10-global.cfg -f 20-stats.cfg -f file1.cfg -f file2.cfg ...
 "
 
 # used by usage() in lib/utils.sh
 # shellcheck disable=SC2034
-usage_args="<name>.cfg"
+usage_args="<file.cfg> [<file2.cfg> ...]"
 
 help_usage "$@"
 
@@ -37,4 +39,4 @@ min_args 1 "$@"
 
 cfg="$1"
 
-haproxy -f "$srcdir/10-global.cfg" -f "$srcdir/20-stats.cfg" -f "$cfg"
+eval haproxy -f "$srcdir/10-global.cfg" -f "$srcdir/20-stats.cfg" "$(for cfg in "$@"; do echo -n " -f '$cfg'"; done)"
