@@ -7,8 +7,8 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=security_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
-[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs)](https://github.com/HariSekhon/HAProxy-configs/network)
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/network)
 [![Lines of Code](https://img.shields.io/badge/lines%20of%20code-6k-lightgrey?logo=codecademy)](https://github.com/HariSekhon/HAProxy-configs)
 
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/HAProxy-configs)
