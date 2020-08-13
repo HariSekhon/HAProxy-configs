@@ -25,7 +25,8 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![Codeship Status for HariSekhon/HAProxy-configs](https://app.codeship.com/projects/6e6d6a50-3c5f-0138-6969-1ecbdb7eccb9/status?branch=master)](https://app.codeship.com/projects/387248)
 [![Shippable](https://img.shields.io/shippable/5e52c63645c70f0007ff514e/master?label=Shippable&logo=shippable)](https://app.shippable.com/github/HariSekhon/HAProxy-configs/dashboard/jobs)
 [![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FHAProxy-configs?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&type=cf-1)](https://g.codefresh.io/pipelines/edit/new/builds?id=5e58e31b3953b7fe454b7904&pipeline=HAProxy-configs&projects=GitHub&projectId=5e52ca8ea284e00f882ea992&context=github&filter=page:1;pageSize:10;timeFrameStart:week)
-[![Wercker](https://img.shields.io/wercker/ci/5e58ef3d4fb3d108006b1ff5/master?label=Wercker&logo=oracle)](https://app.wercker.com/harisekhon/haproxy-configs/runs)
+<!--[![Wercker](https://img.shields.io/wercker/ci/5e58ef3d4fb3d108006b1ff5/master?label=Wercker&logo=oracle)](https://app.wercker.com/harisekhon/haproxy-configs/runs)-->
+[![Wercker](https://app.wercker.com/status/3eab52046f673b476fa5e54adb5dfbba/s/master "wercker status")](https://app.wercker.com/harisekhon/haproxy-configs/runs)
 [![BuildKite](https://img.shields.io/buildkite/0eaa69ea93cc6695ecd48013d1daf895e0e9a7bcef068b7324/master?label=BuildKite)](https://buildkite.com/hari-sekhon/haproxy-configs)
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/HAProxy-configs/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/HAProxy-configs)
 [![Semaphore](https://harisekhon.semaphoreci.com/badges/HAProxy-configs.svg)](https://harisekhon.semaphoreci.com/projects/HAProxy-configs)
