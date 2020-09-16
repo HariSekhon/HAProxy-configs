@@ -62,6 +62,8 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![CI Alpine](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Alpine/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Alpine%22)
 [![CI Alpine 3](https://github.com/HariSekhon/HAProxy-configs/workflows/CI%20Alpine%203/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CI+Alpine+3%22)
 
+[git.io/haproxy-configs](https://git.io/haproxy-configs)
+
 Advanced HAProxy configurations for Multi-Master, Active-Standby (Hadoop, HBase, Presto) and Peer-to-Peer technologies (Elasticsearch, SolrCloud etc).
 
 Designed both for production-grade High Availability and also to make scripting and monitoring easier when connecting to APIs.
