@@ -54,6 +54,9 @@ cache:
   - pip
   - directories:
     - $HOME/.cache
+    - $HOME/.cpan
+    - $HOME/.cpanm
+    - $HOME/.gem
     - bash-tools/pytools_checks
 
 # ==============================================
