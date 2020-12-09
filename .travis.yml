@@ -13,11 +13,14 @@
 #  http://www.linkedin.com/in/harisekhon
 #
 
+# https://docs.travis-ci.com/user/customizing-the-build/
+
 version: ~> 1.0
 
-# there's no 'language: bash'
+# https://docs.travis-ci.com/user/languages/minimal-and-generic/
 language: generic
 
+# https://docs.travis-ci.com/user/multi-os/
 os:
   - linux
   - osx
@@ -26,15 +29,15 @@ os:
 # macOS 10.15.7 - otherwise defaults to Mac macOS 10.13 with xcode9.4 otherwise - and HomeBrew update takes 50 minutes until the build times out :-/
 osx_image: xcode12.2
 
-#dist: trusty
-
-sudo: true
-
+# https://docs.travis-ci.com/user/notifications/
 notifications:
   email: false
 
+# https://docs.travis-ci.com/user/environment-variables/
 #env:
 #  - DEBUG=1
+
+# https://docs.travis-ci.com/user/job-lifecycle/
 
 # avoid package checksum mismatches when installing packages
 before_install:
