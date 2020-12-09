@@ -44,6 +44,13 @@ osx_image: xcode12.2
 notifications:
   email: false
 
+# ========================================
+# https://docs.travis-ci.com/user/caching/
+
+cache:
+  - directories:
+    - bash-tools
+
 # ==============================================
 # https://docs.travis-ci.com/user/job-lifecycle/
 
