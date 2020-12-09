@@ -48,8 +48,9 @@ notifications:
 # https://docs.travis-ci.com/user/caching/
 
 cache:
+  - pip
   - directories:
-    - bash-tools
+    - bash-tools/pytools_checks
 
 # ==============================================
 # https://docs.travis-ci.com/user/job-lifecycle/
