@@ -57,7 +57,6 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![Debian 9](https://github.com/HariSekhon/HAProxy-configs/workflows/Debian%209/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22Debian+9%22)
 [![Debian 10](https://github.com/HariSekhon/HAProxy-configs/workflows/Debian%2010/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22Debian+10%22)
 [![CentOS](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS%22)
-[![CentOS 6](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS%206/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS+6%22)
 [![CentOS 7](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS%207/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS+7%22)
 [![CentOS 8](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS%208/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS+8%22)
 [![Fedora](https://github.com/HariSekhon/HAProxy-configs/workflows/Fedora/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22Fedora%22)
