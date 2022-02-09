@@ -11,6 +11,7 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/network)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/HariSekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/commits/master)
 [![Lines of Code](https://img.shields.io/badge/lines%20of%20code-6k-lightgrey?logo=codecademy)](https://github.com/HariSekhon/HAProxy-configs)
+[![License](https://img.shields.io/github/license/HariSekhon/HAProxy-configs)](https://github.com/HariSekhon/HAProxy-configs/blob/master/LICENSE)
 
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/HAProxy-configs)
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/HAProxy-configs)
