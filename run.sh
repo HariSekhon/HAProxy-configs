@@ -4,13 +4,13 @@
 #  Author: Hari Sekhon
 #  Date: 2020-08-07 11:47:44 +0100 (Fri, 07 Aug 2020)
 #
-#  https://github.com/harisekhon/haproxy-configs
+#  https://github.com/HariSekhon/HAProxy-configs
 #
 #  License: see accompanying Hari Sekhon LICENSE file
 #
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help steer this or other code I publish
 #
-#  https://www.linkedin.com/in/harisekhon
+#  https://www.linkedin.com/in/HariSekhon
 #
 
 set -euo pipefail
