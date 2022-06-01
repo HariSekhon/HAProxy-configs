@@ -50,6 +50,7 @@ Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologie
 [![Repo on GitHub](https://img.shields.io/badge/repo-GitHub-2088FF?logo=github)](https://github.com/HariSekhon/HAProxy-configs)
 [![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-FCA121?logo=gitlab)](https://gitlab.com/HariSekhon/HAProxy-configs)
 [![Repo on BitBucket](https://img.shields.io/badge/repo-BitBucket-0052CC?logo=bitbucket)](https://bitbucket.org/HariSekhon/HAProxy-configs)
+[![ShellCheck](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/shellcheck.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/shellcheck.yaml)
 [![Validation](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/validate.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/validate.yaml)
 [![Semgrep](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/semgrep.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/semgrep.yaml)
 [![Kics](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/kics.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/kics.yaml)
