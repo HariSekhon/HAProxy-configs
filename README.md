@@ -1,5 +1,4 @@
-Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
-================================
+# Advanced HAProxy Configs for Big Data, NoSQL, Web and Infrastructure technologies
 
 [![GitHub stars](https://img.shields.io/github/stars/harisekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/harisekhon/HAProxy-configs?logo=github)](https://github.com/HariSekhon/HAProxy-configs/network)
