@@ -1,5 +1,5 @@
 {
-  "id": "haproxy-configs",
+  "id": "HAProxy-configs",
   "plugin_id": "yaml.config.plugin",
   "material": {
     "type": "git",
