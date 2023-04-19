@@ -12,6 +12,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=security_rating)](https://sonarcloud.io/dashboard?id=HariSekhon_HAProxy-configs)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_HAProxy-configs&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=HariSekhon_HAProxy-configs)
 
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/HAProxy-configs)
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/HAProxy-configs)
