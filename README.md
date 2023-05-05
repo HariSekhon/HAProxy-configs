@@ -38,8 +38,8 @@
 [![Travis CI](https://img.shields.io/badge/TravisCI-ready-blue?logo=travis&label=Travis%20CI)](https://github.com/HariSekhon/HAProxy-configs/blob/master/.travis.yml)
 
 [![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/HariSekhon.HAProxy-configs?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=10&branchName=master)
-[![GitLab Pipeline](https://img.shields.io/gitlab/pipeline/harisekhon/HAProxy-configs?logo=gitlab&label=GitLab%20CI)](https://gitlab.com/HariSekhon/HAProxy-configs/pipelines)
-[![BitBucket Pipeline](https://img.shields.io/bitbucket/pipelines/harisekhon/haproxy-configs/master?logo=bitbucket&label=BitBucket%20CI)](https://bitbucket.org/harisekhon/haproxy-configs/addon/pipelines/home#!/)
+[![GitLab Pipeline](https://img.shields.io/badge/GitLab%20CI-legacy-lightgrey?logo=gitlab)](https://gitlab.com/HariSekhon/HAProxy-configs/pipelines)
+[![BitBucket Pipeline](https://img.shields.io/badge/Bitbucket%20CI-legacy-lightgrey?logo=bitbucket)](https://bitbucket.org/harisekhon/haproxy-configs/addon/pipelines/home#!/)
 [![AWS CodeBuild](https://img.shields.io/badge/AWS%20CodeBuild-ready-blue?logo=amazon%20aws)](https://github.com/HariSekhon/HAProxy-configs/blob/master/buildspec.yml)
 [![GCP Cloud Build](https://img.shields.io/badge/GCP%20Cloud%20Build-ready-blue?logo=google%20cloud&logoColor=white)](https://github.com/HariSekhon/HAProxy-configs/blob/master/cloudbuild.yaml)
 
