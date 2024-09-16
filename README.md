@@ -98,12 +98,12 @@ Cloud & Big Data Contractor, United Kingdom
 
 Each config comes pre-tuned with:
 
-  1. Specialised Health Checks per technology's API
-  1. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
-  1. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
-  1. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
-  1. Additional logging
-  1. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
+1. Specialised Health Checks per technology's API
+1. Load Balancing algorithm selected best suited per technology (depending on Active/Passive, Peer-to-Peer etc)
+1. Various buffer sizes, keepalives, connection limits and server retries already tuned (many via shared global config `10-global.cfg`)
+1. ACL protections - limits access to private IP addresses - safer by default but easy to disable if you need to serve the internet
+1. Additional logging
+1. Optional Stats Admin UI (excellent for admin, monitoring and debugging - password protected, change the default password from 'test' in `20-stats.cfg` if you source that config)
 
 You should use an expert consultant to fine tune to your needs but these should be extremely close to your finished production configurations. **In most cases all you need to do is put in your addresses for the backend servers**.
 
@@ -145,7 +145,7 @@ and easily with multiple configs
 
 ### Backend Server Addresses (set these to your cluster hosts)
 
--*In most cases all you'll need to do is add your server addresses in to the backend config and then start HAProxy**.
+**In most cases all you'll need to do is add your server addresses in to the backend config and then start HAProxy**.
 
 Common backend server addresses have been pre-populated for convenience including:
 
@@ -163,9 +163,9 @@ See the ```untested/``` directory for a few more including SSL config versions I
 
 Forked as a submodule from the [Advanced Nagios Plugins Collection](https://github.com/HariSekhon/Nagios-Plugins#advanced-nagios-plugins-collection). These HAProxy configs are tested against Docker containers as part of CI tests in that repo.
 
-### Stargazers over time
+## Star History
 
-[![Stargazers over time](https://starchart.cc/HariSekhon/HAProxy-configs.svg)](https://starchart.cc/HariSekhon/HAProxy-configs)
+[![Star History Chart](https://api.star-history.com/svg?repos=HariSekhon/HAProxy-configs&type=Date)](https://star-history.com/#HariSekhon/HAProxy-configs&Date)
 
 [git.io/haproxy-configs](https://git.io/haproxy-configs)
 
