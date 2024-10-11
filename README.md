@@ -50,6 +50,7 @@
 [![Repo on Azure DevOps](https://img.shields.io/badge/repo-Azure%20DevOps-0078D7?logo=azure%20devops)](https://dev.azure.com/harisekhon/GitHub/_git/HAProxy-configs)
 
 [![ShellCheck](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/shellcheck.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/shellcheck.yaml)
+[![Markdown](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/markdown.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/markdown.yaml)
 [![Validation](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/validate.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/validate.yaml)
 [![Kics](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/kics.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/kics.yaml)
 [![Grype](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/grype.yaml/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions/workflows/grype.yaml)
