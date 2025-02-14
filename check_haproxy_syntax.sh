@@ -42,7 +42,8 @@ test_haproxy_conf(){
     local cfg="$1"
     local str
     str="$(printf "%-${maxwidth}s " "$cfg:")"
-    if haproxy -v | grep -Eqi '^HA?Proxy version (1|2\.[01])'; then
+    #if haproxy -v | grep -Eqi '^HA-?Proxy version (1|2\.[01])'; then
+    if [ "$(bc <<< "$haproxy_version < 2.2")" = 1 ]; then
         if grep -q '^[[:space:]]*http-check send meth' "$cfg"; then
             echo "Skipping due to old HAProxy version not supporting 'http-check send meth'"
             return
