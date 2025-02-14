@@ -74,7 +74,7 @@
 [![Alpine](https://github.com/HariSekhon/HAProxy-configs/workflows/Alpine/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22Alpine%22)
 [![Alpine 3](https://github.com/HariSekhon/HAProxy-configs/workflows/Alpine%203/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22Alpine+3%22)
 
-<!--
+<!-- Disabled since upstream repos are dead and builds can't succeeed now
 [![CentOS](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS%22)
 [![CentOS 7](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS%207/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS+7%22)
 [![CentOS 8](https://github.com/HariSekhon/HAProxy-configs/workflows/CentOS%208/badge.svg)](https://github.com/HariSekhon/HAProxy-configs/actions?query=workflow%3A%22CentOS+8%22)
