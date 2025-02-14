@@ -42,6 +42,12 @@ test_haproxy_conf(){
     local cfg="$1"
     local str
     str="$(printf "%-${maxwidth}s " "$cfg:")"
+    if haproxy -v | grep -q '^HAProxy version 1'; then
+        if grep -q '^[[:space:]]*http-check send meth' "$cfg"; then
+            echo "Skipping due to old HAProxy version not supporting 'http-check send meth'"
+            return
+        fi
+    fi
     if haproxy -c -f 10-global.cfg -f 20-stats.cfg -f "$cfg" &>/dev/null; then
         echo "$str OK"
         if ! grep -q "^$cfg$" <<< "$configs_without_acls"; then
@@ -109,7 +115,7 @@ if command -v haproxy &>/dev/null; then
     echo
     maxwidth=0
     for cfg in $configs; do
-        if [ "${#cfg}" -gt $maxwidth ]; then
+        if [ "${#cfg}" -gt "$maxwidth" ]; then
             maxwidth="${#cfg}"
         fi
     done
